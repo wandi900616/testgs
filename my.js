@@ -22,5 +22,3 @@ function addGS() {
 }
 
 document.getElementById("btn2").addEventListener("click", addGS)
-
-
