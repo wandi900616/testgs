@@ -1,3 +1,19 @@
+function testGS() {
+
+    const url = "https://script.google.com/macros/s/AKfycbx0kpdBZ-Emperpdqa9xs0IiHe3jytErc054ulGdR0EJ8MPfUYdnb99rzXJeBoE_D0/exec"
+
+    fetch(url)
+        .then(d => d.json())
+        .then(d => {
+            document.getElementById("app").textContent = d[0].status;
+        });
+
+
+
+}
+
+
+
 function addGS() {
 
 
@@ -21,4 +37,7 @@ function addGS() {
 
 }
 
+document.getElementById("btn").addEventListener("click", testGS)
 document.getElementById("btn2").addEventListener("click", addGS)
+
+
